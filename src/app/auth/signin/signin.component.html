@@ -1,0 +1,26 @@
+<form nz-form [formGroup]="signinForm">
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your email">
+      <input type="text" nz-input formControlName="email" placeholder="Email" nzSize="large">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your password">
+      <input type="password" nz-input formControlName="password" placeholder="Password" nzSize="large">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control>
+      <div style="display: flex; justify-content: space-between">
+      <label nz-checkbox formControlName="remember">
+        <span>Remember me</span>
+      </label>
+      <button nz-button nzType="primary" nzSize="large">Sign in</button>
+      </div>
+    </nz-form-control>
+  </nz-form-item>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <p>Forgot password</p>
+    <a routerLink="/auth/signup">Create an APP account</a>
+  </div>
+</form>

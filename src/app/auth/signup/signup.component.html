@@ -1,0 +1,33 @@
+<form nz-form [formGroup]="signupForm">
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your email">
+        <input type="text" nz-input formControlName="email" placeholder="Email" nzSize="large">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your name">
+      <input type="text" nz-input formControlName="username" placeholder="username" nzSize="large">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your password">
+        <input type="password" nz-input formControlName="password" placeholder="Password" nzSize="large">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your password">
+      <input type="password" nz-input formControlName="checkPassword" placeholder="Password" nzSize="large">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control style="display: flex; justify-content: space-between">
+      <label nz-checkbox formControlName="agree">
+        <span>I agree with terms and conditions</span>
+      </label>
+    </nz-form-control>
+  </nz-form-item>
+  <button nz-button nzType="primary" nzSize="large" nzBlock>Sign up</button>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <a routerLink="/auth/signin">Already have an account? Sign in</a>
+  </div>
+</form>
